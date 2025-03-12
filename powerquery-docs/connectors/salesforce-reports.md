@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/636ab464-4b79-4641-beaf-c9ef008e22b3)![image](https://github.com/user-attachments/assets/316fc4cb-3a43-4df1-bd92-457856b647a2)---
 title: Power Query Salesforce Reports connector.
 description: Includes basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: DougKlopfenstein
@@ -74,15 +74,15 @@ To connect to Salesforce Reports data:
    > [!NOTE]
    >Currently, you may need to select the **Custom** URL, enter **`https://www.salesforce.com`** in the text box, and then select **Production** to connect to your data.
 
-   You can also select Custom and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
-
+   You can also select Custom and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.  Please note that there are only two supported custom domains, `salesforce.com` and `cloudforce.com` the use of other domains will result in an "Invalid Arguments" error.
+   
    Also, you can select Include relationship columns. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you won’t see those columns.
 
-3. If this is the first time you've made this connection, select an on-premises data gateway, if needed.
+4. If this is the first time you've made this connection, select an on-premises data gateway, if needed.
 
-4. Select **Sign in** to sign in to your Salesforce account. Once you've successfully signed in, select **Next**.
+5. Select **Sign in** to sign in to your Salesforce account. Once you've successfully signed in, select **Next**.
 
-5. In the **Navigator** dialog box, select the Salesforce Reports you want to load. Then select **Transform Data** to transform the data.
+6. In the **Navigator** dialog box, select the Salesforce Reports you want to load. Then select **Transform Data** to transform the data.
 
 ## Specifying a Salesforce API version
 
@@ -105,5 +105,7 @@ For more information on Salesforce API versions and support, visit the [Salesfor
 * Salesforce trial accounts don't have API access.
 
 * Lightning URLs aren't supported.
+
+* Custom URLs only support the salesforce.com and cloudforce.com domains, the use of other domains will result in the "Invalid Arguments" error.
 
 For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
